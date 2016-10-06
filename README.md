@@ -45,7 +45,7 @@ $db['default']['database'] = 'starrs';
 </Directory>
 ```
 
-6. Since we reference an authenication database, you will need to create this file (starrs-auth.db).
+6. Since we reference an authentication database, you will need to create this file (starrs-auth.db).
 
 ```
 htpasswd -b -c /etc/httpd/conf.d/starrs-auth.db root admin
