@@ -20,7 +20,7 @@ WORKDIR /var/www/html
 
 COPY --from=build /src/ .
 
-RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 777 /etc/apache2 ; chmod -R 777 /var/www/html
 
 COPY entrypoint.sh /entrypoint.sh
 
