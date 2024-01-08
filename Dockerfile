@@ -6,7 +6,7 @@ RUN npm install -g bower
 
 COPY src/ .
 
-COPY .git .
+COPY .git ./.git
 
 RUN bower install --allow-root
 
@@ -15,6 +15,8 @@ FROM php:7.4-apache-bullseye AS prod
 RUN apt update && apt install -y libapache2-mod-auth-openidc libpq-dev git
 
 RUN docker-php-ext-install pgsql
+
+RUN git config --system --add safe.directory /var/www/html
 
 WORKDIR /var/www/html
 
