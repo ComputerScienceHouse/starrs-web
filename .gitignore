@@ -2,8 +2,7 @@
 # Application
 ###############
 
-application/config/database.php
-application/config/impulse.php
+.env
 
 ###############
 # Linux
@@ -39,4 +38,4 @@ application/config/impulse.php
 ###############
 # Bower
 ###############
-bower_components
+src/bower_components

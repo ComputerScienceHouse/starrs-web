@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "csh-material-bootstrap": "^1.0.0",
+    "csh-material-bootstrap": "^3.3.6",
     "font-awesome": "fontawesome#^4.6.3",
     "selectize": "^0.12.3",
     "js-cookie": "^2.1.3",
