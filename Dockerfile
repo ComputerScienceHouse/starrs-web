@@ -10,7 +10,7 @@ COPY .git ./.git
 
 RUN bower install --allow-root
 
-FROM php:7.4-apache-bullseye AS prod
+FROM php:8.5-apache AS prod
 
 RUN apt update && apt install -y libapache2-mod-auth-openidc libpq-dev git
 
