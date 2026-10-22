@@ -26,9 +26,9 @@ echo "
 
     OIDCRedirectURI $HTTP_SCHEME://$SERVER_NAME/sso/redirect" > /etc/apache2/sites-enabled/000-default.conf
 
-#if [ $HTTP_SCHEME = "https" ]; then
-#	echo "    OIDCXForwardedHeaders X-Forwarded-Host X-Forwarded-Proto X-Forwarded-Port Forwarded" >> /etc/apache2/sites-enabled/000-default.conf
-#fi
+if [ $HTTP_SCHEME = "https" ]; then
+	echo "    OIDCXForwardedHeaders X-Forwarded-Host X-Forwarded-Proto X-Forwarded-Port Forwarded" >> /etc/apache2/sites-enabled/000-default.conf
+fi
 
 echo "    OIDCCryptoPassphrase $(tr -dc A-Za-z0-9 </dev/urandom | head -c 64 ; echo '')
     OIDCProviderMetadataURL https://sso.csh.rit.edu/auth/realms/csh/.well-known/openid-configuration
